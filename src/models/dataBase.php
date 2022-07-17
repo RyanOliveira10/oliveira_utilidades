@@ -1,6 +1,6 @@
 <?php
 
-include_once '../init.php';
+require_once '/xampp/htdocs/oliveira_utilidades/src/init.php';
 
 class BancoDeDados
 {
