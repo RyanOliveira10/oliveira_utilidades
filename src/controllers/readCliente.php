@@ -18,7 +18,7 @@ function listaClientes()
       echo "<td>" . $value['telefone'] . "</td>";
       echo "<td>" . $value['email'] . "</td>";
       echo "<td>" . $value['endereco'] . "</td>";
-      echo "<td><a class='btn btn-warning' href='editar.php?id=" . $value['id'] . "'>Editar</a><a class='btn btn-danger' href='../../controllers/deleteCliente.php?id=" . $value['id'] . "'>Excluir</a></td>";
+      echo "<td><a class='btn btn-warning' href='editaClientes.php?id=" . $value['id'] . "'>Editar</a><a class='btn btn-danger' href='../../controllers/deleteCliente.php?id=" . $value['id'] . "'>Excluir</a></td>";
       echo "</tr>";
     }
   }

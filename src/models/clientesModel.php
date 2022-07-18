@@ -84,13 +84,34 @@ class ModelCliente extends BancoDeDados
     }
     var_dump($result);
   }
-  public function update()
+  public function update($nome, $sobrenome, $telefone, $email, $endereco, $id)
   {
+    $stmt = $this->mysqli->prepare("UPDATE `clientes` SET `nome` = ?, `sobrenome`=?, `telefone`=?, `email`=?,`endereco` = ? WHERE `nome` = ?");
+    $stmt->bind_param("sssssss", $nome, $sobrenome, $telefone, $email, $endereco, $id);
+
+    //verifica se a condiçao é verdadeira
+    if ($stmt->execute() == TRUE) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  public function delete()
+  public function delete($id)
   {
+    if ($this->mysqli->query("DELETE FROM `clientes` WHERE `id` = '" . $id . "';") == TRUE) {
+      return true;
+    } else {
+      return false;
+    }
   }
+
+  /*public function pesquisaCliente($id)
+  {
+    //$id = $_GET['id'];
+    $result = $this->mysqli->query("SELECT * FROM clientes WHERE nome='$id'");
+    //return $result->fetch_array(MYSQLI_ASSOC);
+  }*/
 };
 
-$r = new ModelCliente();
-$r->read();
+//$r = new ModelCliente();
+//$r->read();
