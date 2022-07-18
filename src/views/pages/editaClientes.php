@@ -52,25 +52,25 @@
     <form action="../../controllers/updateCliente.php" method="POST">
       <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="João Silva" required value="<?php ?>">
+        <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="João Silva" required value="<?php echo $edita['nome'] ?>">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
-        <input type="text" name="sobrenome" class="form-control" id="formGroupExampleInput2" placeholder="Fagundes de oliveira" required>
+        <input type="text" name="sobrenome" class="form-control" id="formGroupExampleInput2" placeholder="Fagundes de oliveira" required value="<?php echo $edita['sobrenome'] ?>">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Telefone</label>
-        <input type="text" name="telefone" class="form-control" id="formGroupExampleInput2" placeholder="31975678930" required>
+        <input type="text" name="telefone" class="form-control" id="formGroupExampleInput2" placeholder="31975678930" required value="<?php echo $edita['telefone'] ?>">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Email</label>
-        <input type="text" name="email" class="form-control" id="formGroupExampleInput2" placeholder="joaosilva123@gmail.com" required>
+        <input type="text" name="email" class="form-control" id="formGroupExampleInput2" placeholder="joaosilva123@gmail.com" required value="<?php echo $edita['email'] ?>">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Endereço</label>
-        <input type="text" name="endereco" class="form-control" id="formGroupExampleInput2" placeholder="Antonio Dias" required>
+        <input type="text" name="endereco" class="form-control" id="formGroupExampleInput2" placeholder="Antonio Dias" required value="<?php echo $edita['endereco'] ?>">
       </div>
-      <button type="submit" onclick="validaFormulario()" class="btn btn-primary">Salvar alterações</button>
+      <input type="submit" name="submit" onclick="validaFormulario()" class="btn btn-primary" value="Salvar alterações"/>
     </form>
   </main>
 

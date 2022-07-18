@@ -84,10 +84,10 @@ class ModelCliente extends BancoDeDados
     }
     var_dump($result);
   }
-  public function update($nome, $sobrenome, $telefone, $email, $endereco, $id)
+  public function update($nome, $sobrenome, $telefone, $email, $endereco)
   {
     $stmt = $this->mysqli->prepare("UPDATE `clientes` SET `nome` = ?, `sobrenome`=?, `telefone`=?, `email`=?,`endereco` = ? WHERE `nome` = ?");
-    $stmt->bind_param("sssssss", $nome, $sobrenome, $telefone, $email, $endereco, $id);
+    $stmt->bind_param("ssssss", $nome, $sobrenome, $telefone, $email, $endereco, $nome);
 
     //verifica se a condiçao é verdadeira
     if ($stmt->execute() == TRUE) {
@@ -105,13 +105,12 @@ class ModelCliente extends BancoDeDados
     }
   }
 
-  /*public function pesquisaCliente($id)
+  public function readById($id)
   {
-    //$id = $_GET['id'];
-    $result = $this->mysqli->query("SELECT * FROM clientes WHERE nome='$id'");
-    //return $result->fetch_array(MYSQLI_ASSOC);
-  }*/
+    $result = $this->mysqli->query("SELECT * FROM clientes WHERE id='$id'");
+    if($result->num_rows==1){
+      $row = $result->fetch_array(MYSQLI_ASSOC);
+      return $row;
+    }
+  }
 };
-
-//$r = new ModelCliente();
-//$r->read();
