@@ -22,6 +22,7 @@
       <a href="../pages/listaClientes.php" class="btn btn-info">Listar Clientes</a>
       <a href="#" class="btn btn-secondary">Listar Fornecedores</a>
       <a href="../pages/home.php" class="btn btn-light">Página inicial</a>
+      <a href="../../../realizaLogout.php" class="btn" style="background-color: orange;">Sair da Sessão</a>
     </div>
   </div>
 </div>
