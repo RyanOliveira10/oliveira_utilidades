@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="pt-br">
 <?php
+session_cache_expire(30);
 session_start();
 //session_destroy();
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
   header('location:index.php');
+  exit();
 }
 
 $logado = $_SESSION['login'];
@@ -20,6 +22,12 @@ $logado = $_SESSION['login'];
 <body>
   <?php include '../components/header.php' ?>
   <h1>Pagina Home</h1>
+
+  <?php
+    $nome = $_SESSION['login'];
+    echo "<h1> Bem vindo " . $nome . " !</h1>";
+  ?>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 

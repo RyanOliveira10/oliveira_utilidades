@@ -1,13 +1,13 @@
 <html>
 
 <style>
-  .menu{
+  .menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
   }
 
-  .menu a{
+  .menu a {
     margin: 1rem;
   }
 </style>
@@ -22,7 +22,8 @@
       <a href="../pages/listaClientes.php" class="btn btn-info">Listar Clientes</a>
       <a href="#" class="btn btn-secondary">Listar Fornecedores</a>
       <a href="../pages/home.php" class="btn btn-light">Página inicial</a>
-      <a href="../../../realizaLogout.php" class="btn" style="background-color: orange;">Sair da Sessão</a>
+      <!--<a href="../../../login/logout.php" class="btn" style="background-color: orange;">Sair da Sessão</a>-->
+      <a class="btn" style="background-color: orange;" onclick="sair()">Sair da sessao</a>
     </div>
   </div>
 </div>
@@ -33,5 +34,15 @@
     </button>
   </div>
 </nav>
+
+<script>
+  function sair() {
+    var resultado = confirm("Deseja realmente sair?");
+    if (resultado == true) {
+      window.location.href = "../../../login/logout.php";
+      alert("Sessão encerrada!");
+    }
+  }
+</script>
 
 </html>
