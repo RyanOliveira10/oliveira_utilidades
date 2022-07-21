@@ -2,11 +2,11 @@
 header("Access-Control-Allow-Origin: *");
 include 'dataBase.php';
 
-class ModelCliente extends BancoDeDados
+class ModelClient extends DataBase
 {
 
   //atributos dos clientes
-  private $nome;
+  /*private $nome;
   private $sobrenome;
   private $telefone;
   private $email;
@@ -54,15 +54,15 @@ class ModelCliente extends BancoDeDados
   public function getEndereco()
   {
     return $this->endereco;
-  }
+  }*/
 
 
 
   //operações do banco de dados
-  public function create($nome, $sobrenome, $telefone, $email, $endereco)
+  public function create($fullName, $cpf, $email, $telephone, $city, $district, $road, $houseNumber)
   {
-    $stmt = $this->mysqli->prepare("INSERT INTO clientes (`nome`, `sobrenome`, `telefone`, `email`, `endereco`) VALUES (?,?,?,?,?)");
-    $stmt->bind_param("sssss", $nome, $sobrenome, $telefone, $email, $endereco);
+    $stmt = $this->mysqli->prepare("INSERT INTO clients (`fullName`, `cpf`, `email`, `telephone`, `city`, `district`, `road`, `houseNumber`) VALUES (?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("ssssssss", $fullName, $cpf, $email, $telephone, $city, $district, $road, $houseNumber);
     /*$stmt->bind_param("sssss", $this->getNome($nome), $this->getSobre_nome($sobre_nome), $this->getTelefone($telefone), $this->getEmail($email), $this->getEndereco($endereco));*/
     if ($stmt->execute() == TRUE) {
       return true;
@@ -73,7 +73,7 @@ class ModelCliente extends BancoDeDados
 
   public function read()
   {
-    $result = $this->mysqli->query("SELECT * FROM clientes");
+    $result = $this->mysqli->query("SELECT * FROM clients");
     while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
       $array[] = $row;
     }
@@ -98,7 +98,7 @@ class ModelCliente extends BancoDeDados
   }
   public function delete($id)
   {
-    if ($this->mysqli->query("DELETE FROM `clientes` WHERE `id` = '" . $id . "';") == TRUE) {
+    if ($this->mysqli->query("DELETE FROM `clients` WHERE `id` = '" . $id . "';") == TRUE) {
       return true;
     } else {
       return false;

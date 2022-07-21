@@ -1,5 +1,5 @@
 <?php
-require_once '/xampp/htdocs/oliveira_utilidades/src/models/clientesModel.php';
+require_once '/xampp/htdocs/oliveira_utilidades/src/models/clientModel.php';
 
 $obj = new ModelCliente();
 

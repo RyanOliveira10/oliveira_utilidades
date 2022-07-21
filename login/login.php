@@ -1,23 +1,23 @@
 <?php
 session_start();
-include('conexao.php');
+include('conect.php');
 
-if(empty($_POST['login']) || empty($_POST['senha'])) {
+if(empty($_POST['email']) || empty($_POST['password'])) {
 	header('Location: ../index.php');
 	exit();
 }
 
-$login = mysqli_real_escape_string($conexao, $_POST['login']);
-$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+$email = mysqli_real_escape_string($conection, $_POST['email']);
+$password = mysqli_real_escape_string($conection, $_POST['password']);
 
-$query = "SELECT * FROM `usuarios` WHERE `login` = '$login' AND `senha` = '$senha' ";
+$query = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password' ";
 
-$result = mysqli_query($conexao, $query);
+$result = mysqli_query($conection, $query);
 
 $row = mysqli_num_rows($result);
 
 if($row == 1) {
-	$_SESSION['login'] = $login;
+	$_SESSION['email'] = $email;
 	header('Location: ../src/views/pages/home.php');
 	exit();
 } else {

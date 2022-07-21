@@ -1,4 +1,4 @@
-<?php require_once '../../controllers/readCliente.php' ?>
+<?php require_once '../../controllers/readClient.php' ?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -56,7 +56,7 @@
       margin: 5px;
     }
 
-    @media screen and (max-width: 690px) {
+    @media screen and (max-width: 990px) {
       .content {
         width: 94%;
       }
@@ -104,23 +104,26 @@
 
   <main class="container-fluid content">
     <div class="link">
-      <a href="../pages/cadastroClientes.php" class="btn btn-primary">Cadastrar</a>
+      <a href="../pages/insertClientsView.php" class="btn btn-primary">Cadastrar</a>
     </div>
     <table class="rTable">
       <thead>
         <tr>
           <th>#</th>
-          <th>Nome</th>
-          <th>Sobrenome</th>
-          <th>Telefone</th>
+          <th>Nome Completo</th>
+          <th>Cpf</th>
           <th>Email</th>
-          <th>Endereco</th>
-          <th>Opções</th>
+          <th>Telefone</th>
+          <th>Cidade</th>
+          <th>Bairro</th>
+          <th>Rua</th>
+          <th>Número</th>
+          <th>Opcões</th>
         </tr>
       </thead>
 
       <tbody>
-        <?php listaClientes() ?>
+        <?php readClients() ?>
       </tbody>
     </table>
   </main>

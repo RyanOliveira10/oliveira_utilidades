@@ -46,28 +46,40 @@
 
   <main class="container-fluid">
     <div class="link">
-      <a href="../pages/listaClientes.php" class="btn btn-primary">Listar</a>
+      <a href="../pages/readClientsView.php" class="btn btn-primary">Listar</a>
     </div>
-    <form action="../../controllers/createCliente.php" method="POST">
+    <form action="../../controllers/createClient.php" method="POST">
       <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="João Silva" required>
+        <label for="formGroupExampleInput" class="form-label">Nome Completo</label>
+        <input type="text" name="fullName" class="form-control" id="formGroupExampleInput" placeholder="João Silva Da Souza" required>
       </div>
       <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
-        <input type="text" name="sobrenome" class="form-control" id="formGroupExampleInput2" placeholder="Fagundes de oliveira" required>
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Telefone</label>
-        <input type="text" name="telefone" class="form-control" id="formGroupExampleInput2" placeholder="31975678930" required>
+        <label for="formGroupExampleInput2" class="form-label">CPF</label>
+        <input type="number" name="cpf" class="form-control" id="formGroupExampleInput2" placeholder="12345678900" required>
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Email</label>
-        <input type="text" name="email" class="form-control" id="formGroupExampleInput2" placeholder="joaosilva123@gmail.com" required>
+        <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="joaosilva123@gmail.com" required>
       </div>
       <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Endereço</label>
-        <input type="text" name="endereco" class="form-control" id="formGroupExampleInput2" placeholder="Antonio Dias" required>
+        <label for="formGroupExampleInput2" class="form-label">Telefone</label>
+        <input type="number" name="telephone" class="form-control" id="formGroupExampleInput2" placeholder="31975678930"  required>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Cidade</label>
+        <input type="text" name="city" class="form-control" id="formGroupExampleInput2" placeholder="Antonio Dias" required>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Bairro</label>
+        <input type="text" name="district" class="form-control" id="formGroupExampleInput2" placeholder="Novo Centro" required>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Rua</label>
+        <input type="text" name="road" class="form-control" id="formGroupExampleInput2" placeholder="Lavrinha" required>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Número</label>
+        <input type="text" name="houseNumber" class="form-control" id="formGroupExampleInput2" placeholder="1002" required>
       </div>
       <button type="submit" onclick="validaFormulario()" class="btn btn-primary">Cadastrar</button>
     </form>

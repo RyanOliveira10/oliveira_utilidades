@@ -1,4 +1,13 @@
 # validar formulario de login - concluido
 # implementar recuperação de senha - tarefa adiada
 # dar feedback ao usuario sobre erro ao logar, logado ou sair da sessao - concluido
-# implementar botao de vizualizar senha - pendente
+# implementar botao de vizualizar senha - concluido
+# refatora todo codigo com os dados corretos e no idioma ingles - pendente
+
+#metas da refatoração -> converter todo o codigo para a linguagem inglês, mudar nomes de funções, variaveis, e classes para melhor entendimento do codigo, fazer comentarios importantes para melhor entendimento.
+
+etapa 1 -> mudar as propriedades da tabela usuarios - concluido
+etapa 2 -> mudar as propriedades da tabela clients - clients
+etapa 3 -> mudar as propriedades da model clients - pendente
+etapa 4 -> mudar as propriedades dos controllers respectivo a clientes - pendente
+etapa 5 -> mudar as propriedades na pagina de cadastro e listagem - cadastro e listar concluido - pendente editar

@@ -16,10 +16,10 @@
   <div class="bg-dark p-4">
     <div class="menu">
       <a href="#" class="btn btn-success">Cadastrar Produtos</a>
-      <a href="../pages/cadastroClientes.php" class="btn btn-primary">Cadastrar Clientes</a>
+      <a href="../pages/insertClientsView.php" class="btn btn-primary">Cadastrar Clientes</a>
       <a href="#" class="btn btn-danger">Cadastrar Fornecedores</a>
       <a href="#" class="btn btn-warning">Listar Produtos</a>
-      <a href="../pages/listaClientes.php" class="btn btn-info">Listar Clientes</a>
+      <a href="../pages/readClientsView.php" class="btn btn-info">Listar Clientes</a>
       <a href="#" class="btn btn-secondary">Listar Fornecedores</a>
       <a href="../pages/home.php" class="btn btn-light">Página inicial</a>
       <!--<a href="../../../login/logout.php" class="btn" style="background-color: orange;">Sair da Sessão</a>-->
