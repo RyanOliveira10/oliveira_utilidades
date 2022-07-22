@@ -1,24 +1,29 @@
 <?php
 require_once '/xampp/htdocs/oliveira_utilidades/src/models/clientModel.php';
 
-$obj = new ModelCliente();
+$edit = new ModelClient();
 
 if (isset($_POST['submit'])) {
-  $obj->update(
-    $_POST['nome'],
-    $_POST['sobrenome'],
-    $_POST['telefone'],
+  $edit->update(
+    $_POST['fullName'],
+    $_POST['cpf'],
     $_POST['email'],
-    $_POST['endereco']
+    $_POST['telephone'],
+    $_POST['city'],
+    $_POST['district'],
+    $_POST['road'],
+    $_POST['houseNumber'],
+    $_POST['id'],
   );
-  echo "<script>window.location.href = 'http://localhost/oliveira_utilidades/src/views/pages/listaClientes.php';
+  echo "<script>window.location.href = 'http://localhost/oliveira_utilidades/src/views/pages/readClientsView.php';
   alert('registro editado com sucesso');
   </script>";
+  
 }
 
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-  $edita = $obj->readById($id);
+  $result = $edit->readById($id);
   //print_r($edita);
 }
 

@@ -21,7 +21,7 @@ function readClients()
       echo "<td>" . $value['district'] . "</td>";
       echo "<td>" . $value['road'] . "</td>";
       echo "<td>" . $value['houseNumber'] . "</td>";
-      echo "<td><a class='btn btn-warning' href='editaClientes.php?id=" . $value['id'] . "'>Editar</a><a class='btn btn-danger' href='../../controllers/deleteClient.php?id=" . $value['id'] . "'>Excluir</a></td>";
+      echo "<td><a class='btn btn-warning' href='editClientsView.php?id=" . $value['id'] . "'>Editar</a><a class='btn btn-danger' href='../../controllers/deleteClient.php?id=" . $value['id'] . "'>Excluir</a></td>";
       echo "</tr>";
     }
   }

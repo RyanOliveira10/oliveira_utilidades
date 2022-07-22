@@ -6,8 +6,4 @@
 
 #metas da refatoração -> converter todo o codigo para a linguagem inglês, mudar nomes de funções, variaveis, e classes para melhor entendimento do codigo, fazer comentarios importantes para melhor entendimento.
 
-etapa 1 -> mudar as propriedades da tabela usuarios - concluido
-etapa 2 -> mudar as propriedades da tabela clients - clients
-etapa 3 -> mudar as propriedades da model clients - pendente
-etapa 4 -> mudar as propriedades dos controllers respectivo a clientes - pendente
-etapa 5 -> mudar as propriedades na pagina de cadastro e listagem - cadastro e listar concluido - pendente editar
+#funcao editar nao esta funcionando como deveria, todos os dados do cliente editam, com execao do nome.
