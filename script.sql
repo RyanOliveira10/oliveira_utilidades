@@ -2,17 +2,17 @@ CREATE DATABASE oliveira_utilidades DEFAULT CHARACTER SET utf8;
 USE oliveira_utilidades;
 
 CREATE TABLE users(
-	id INT,
+	id INT IDENTITY,
 	fullName VARCHAR(225) NOT NULL,
 	password INT(6) NOT NULL,
 	cpf INT(11) NOT NULL,
 	email VARCHAR(225) NOT NULL,
 	telephone VARCHAR(225) NOT NULL,
 	PRIMARY KEY(id)
-)
+);
 
 CREATE TABLE clients(
-	id INT,
+	id INT IDENTITY,
 	fullName VARCHAR(225) NOT NULL,
 	cpf INT(11) NOT NULL,
 	email VARCHAR(225) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE clients(
 	road VARCHAR(225) NOT NULL,
 	houseNumber INT(20) NOT NULL,
 	PRIMARY KEY(id)
-)
+);
 
 CREATE TABLE providers(
 	id INT,
@@ -31,7 +31,7 @@ CREATE TABLE providers(
 	email VARCHAR(225) NOT NULL,
 	telephone VARCHAR(225) NOT NULL,
 	PRIMARY KEY(id)
-)
+);
 
 CREATE TABLE products(
 	id INT,
