@@ -46,7 +46,7 @@
 
   <main class="container-fluid">
     <div class="link">
-      <a href="../pages/readClientsView.php" class="btn btn-primary">Listar</a>
+      <a href="readClientsView.php" class="btn btn-primary">Listar</a>
     </div>
     <form action="../../controllers/createClient.php" method="POST">
       <div class="mb-3">
