@@ -1,6 +1,6 @@
 <?php
 
-require_once '/xampp/htdocs/oliveira_utilidades/src/init.php';
+require_once '../init.php';
 
 class DataBase
 {
