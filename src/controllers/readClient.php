@@ -1,6 +1,6 @@
 <?php
 
-require_once '/xampp/htdocs/oliveira_utilidades/src/models/clientModel.php';
+require_once '../models/clientModel.php';
 
 function readClients()
 {
